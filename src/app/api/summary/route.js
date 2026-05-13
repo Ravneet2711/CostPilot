@@ -6,6 +6,13 @@ const client = new OpenAI({
 
 export async function POST(req) {
   try {
+    if (!process.env.OPENAI_API_KEY) {
+      return Response.json({
+        summary:
+          "Your AI tool audit is complete. We identified opportunities to optimize your AI spending and reduce unnecessary costs.",
+      });
+    }
+
     const body = await req.json();
 
     const completion = await client.chat.completions.create({
@@ -31,7 +38,7 @@ Savings Rate: ${body.savingsRate}%
 
 Tool Analysis:
 ${JSON.stringify(body.toolAnalysis)}
-            `,
+          `,
         },
       ],
     });

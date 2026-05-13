@@ -19,10 +19,10 @@ const Navbar = () => {
           <Link className="hover:text-black transition" href="/">
             Home
           </Link>
-          <Link className="hover:text-black transition" href="#how-it-works">
+          <Link className="hover:text-black transition" href="/#how-it-works">
             How it works
           </Link>
-          <Link className="hover:text-black transition" href="#features">
+          <Link className="hover:text-black transition" href="/#features">
             Features
           </Link>
         </div>

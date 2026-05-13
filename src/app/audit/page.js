@@ -1,4 +1,5 @@
 import AuditForm from "@/components/audit/AuditForm";
+import Link from "next/link";
 
 export default function AuditPage() {
   return (
@@ -22,9 +23,12 @@ export default function AuditPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <button className="w-full sm:w-auto bg-black text-white px-6 py-4 rounded-2xl font-medium hover:opacity-90 transition">
+              <Link
+                href="#audit-form"
+                className="w-full sm:w-auto bg-black text-white px-6 py-4 rounded-2xl font-medium hover:opacity-90 transition"
+              >
                 Start Free Audit
-              </button>
+              </Link>
 
               <p className="text-sm text-gray-500">No signup required</p>
             </div>

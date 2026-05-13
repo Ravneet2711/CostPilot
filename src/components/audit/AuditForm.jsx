@@ -78,7 +78,10 @@ export default function AuditForm() {
       <div className="max-w-6xl mx-auto">
         <Stepper step={step} />
 
-        <div className="bg-white/80 backdrop-blur-xl rounded-[36px] border border-white/50 shadow-[0_20px_80px_rgba(124,58,237,0.12)] p-8 md:p-10 overflow-hidden relative">
+        <div
+          id="audit-form"
+          className="bg-white/80 backdrop-blur-xl rounded-[36px] border border-white/50 shadow-[0_20px_80px_rgba(124,58,237,0.12)] p-8 md:p-10 overflow-hidden relative"
+        >
           <div className="absolute top-0 right-0 w-72 h-72 bg-purple-200/30 blur-3xl rounded-full"></div>
           {step === 1 && (
             <>
@@ -149,12 +152,6 @@ export default function AuditForm() {
               <div></div>
             )}
 
-            {/* <button
-              onClick={handleNext}
-              className="bg-black text-white px-8 py-4 rounded-2xl font-medium hover:opacity-90 transition"
-            >
-              {step === 3 ? "Submit" : "Continue"}
-            </button> */}
             <button
               onClick={handleNext}
               className="flex h-11 items-center gap-2 rounded-lg bg-black px-5 text-sm font-medium text-white transition-all hover:scale-[1.02] hover:bg-gray-900"
